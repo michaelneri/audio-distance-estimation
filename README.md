@@ -23,7 +23,7 @@ If you use any part of this work, please cite the following references:
   doi={Ahead-of-print}
   }
 
-@INPROCEEDINGS{10248087,
+@INPROCEEDINGS{Neri_WASPAA_2023,
   author={Neri, M. and Politis, A. and Krause, D. and Carli, M. and Virtanen, T.},
   booktitle={2023 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)}, 
   title={{Single-Channel Speaker Distance Estimation in Reverberant Environments}}, 
