@@ -21,7 +21,7 @@ If you use any part of this work, please cite the following references:
   volume={Ahead-of-print},
   number={Ahead-of-print},
   pages={Ahead-of-print},
-  doi={Ahead-of-print}
+  doi={10.1109/TASLP.2024.3382504}
   }
 
 @INPROCEEDINGS{Neri_WASPAA_2023,
