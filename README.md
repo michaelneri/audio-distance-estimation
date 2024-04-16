@@ -13,7 +13,7 @@ Michael Neri*, Archontis Politis°, Daniel Aleksander Kraus°, Marco Carli*, and
 Code will be updated ASAP.
 
 ## DATASETS
-We provide our synthetic dataset, STARS23, and QMULTIMIT for speaker distance estimation. VoiceHome2 can be downloaded from <a href="https://zenodo.org/records/1252143" target="_blank">Zenodo</a>
+We provide our synthetic dataset, STARS23, and QMULTIMIT for speaker distance estimation. In addition, training, validation, and testing splits are provided. VoiceHome-2 can be downloaded from <a href="https://zenodo.org/records/1252143" target="_blank">Zenodo</a>
 
 
 
