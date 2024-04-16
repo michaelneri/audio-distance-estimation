@@ -18,9 +18,9 @@ If you use any part of this work, please cite the following references:
   journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing}, 
   title={{Speaker Distance Estimation in Enclosures from Single-Channel Audio}}, 
   year={2024},
-  volume={Ahead-of-print},
-  number={Ahead-of-print},
-  pages={Ahead-of-print},
+  volume={32},
+  number={},
+  pages={2242-2254},
   doi={10.1109/TASLP.2024.3382504}
   }
 
