@@ -3,14 +3,12 @@ Official repository
 
 Code will be updated ASAP.
 
-
-
-
-
+# DATASETS
+It is possible to download the datasets from the following link: <a href="https://uniroma3-my.sharepoint.com/:f:/g/personal/mneri2_os_uniroma3_it/Er6NW6ngIbxPubpMy5PKeFkBdZqGHUsRb64GOTXMV3fcpQ" target="_blank">Onedrive</a> 
 
 -------------
 
-If you use any part of this work, please cite the following references:
+If you use any part of this work (either codes or datasets), please cite the following references:
 
 ```
 @ARTICLE{Neri_TASLP_2024,
