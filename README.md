@@ -1,5 +1,7 @@
 # Speaker Distance Estimation in Enclosures from Single-Channel Audio
 
+<img src="images/network.png"/>
+
 ## Authors
 Michael Neri*, Archontis Politis°, Daniel Aleksander Kraus°, Marco Carli*, and Tuomas Virtanen°
 
