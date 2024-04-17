@@ -3,7 +3,7 @@
 <img src="images/network.png"/>
 
 ## Authors
-Michael Neri*, Archontis Politis°, Daniel Aleksander Kraus°, Marco Carli*, and Tuomas Virtanen°
+Michael Neri*, Archontis Politis°, Daniel Aleksander Krause°, Marco Carli*, and Tuomas Virtanen°
 
 *Department of Industrial, Electronic, and Mechanical Engineering, Roma Tre University, Rome, Italy
 
