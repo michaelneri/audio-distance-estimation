@@ -9,8 +9,8 @@ import pandas as pd
 if __name__ == "__main__":
     # PATHS
     file_path = "dataset_wav/"
-    distance_files = "distances.mat"
-    permutation = "transformed_indeces.mat"
+    distance_files = "dataset_wav/distances.mat"
+    permutation = "dataset_wav/transformed_indeces.mat"
     pathNoisesTraining = "noise_dataset/training_noise"
     pathNoisesVal = "noise_dataset/val_noise"
     pathNoisesTest = "noise_dataset/test_noise"
