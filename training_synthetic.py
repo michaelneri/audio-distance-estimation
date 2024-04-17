@@ -27,7 +27,6 @@ if __name__ == "__main__":
         "att_conf": ["Nothing", "onSpec", "onAll"]
     }
 
-    # for each training
     if config["dBNoise"] == None:
         for conf in config["att_conf"]:
                 all_results = pd.DataFrame([], columns = ["GT", "Pred", "L1", "rL1", "ID"])
@@ -119,14 +118,12 @@ if __name__ == "__main__":
                         pathNoisesTest=pathNoisesTest,
                         dBNoise=db,
                     )
-                    # initialization of the model using the pretrained weights
                     model = SeldTrainer(lr=config["lr"], kernels = config['kernels'], n_grus = config['n_grus'], features_set = config['features_set'], att_conf = att_conf)
                     print("Start Training on {} folds with validation on [{}] \
                             and test on [{}].".format(foldTraining, foldValidation, foldTest))
                     wandb_logger.watch(model, log_graph=False)
                     # start training the model on the training folds
                     trainer.fit(model, datamodule=data_module)
-                    # trainer.test(model, datamodule = data_module)
                     trainer.test(model, datamodule=data_module)
                     wandb.finish()
                     all_results = pd.concat([all_results, pd.DataFrame(model.all_test_results)], ignore_index = True)
