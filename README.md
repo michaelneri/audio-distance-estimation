@@ -12,7 +12,7 @@ Michael Neri*, Archontis Politis°, Daniel Aleksander Krause°, Marco Carli*, an
 
 
 ## Instructions
-Code will be updated ASAP.
+Training, validation, and testing of the approach on all scenarios are provided in training_*.py files.
 
 ## DATASETS
 We provide our synthetic dataset, STARS23, and QMULTIMIT for speaker distance estimation. In addition, training, validation, and testing splits are provided. VoiceHome-2 can be downloaded from <a href="https://zenodo.org/records/1252143" target="_blank">Zenodo</a>
