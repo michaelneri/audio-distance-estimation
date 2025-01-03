@@ -38,7 +38,8 @@ class SyntheticDataset(Dataset):
                 self.file_names.append(list_all_files[i])
                 self.labels.append(self.distances[i])
         if self.pathNoises != None:
-            self.list_all_noises = [f for f in listdir(self.pathNoises) if isfile(join(self.pathNoises, f))]
+            # self.list_all_noises = [f for f in listdir(self.pathNoises) if isfile(join(self.pathNoises, f))]  uncomment for windows
+            self.list_all_files = ['mic_sigs{:04d}.wav'.format(i) for i in range(1, 2501)]  # for Linux
     
     def __getitem__(self, index):
         #format the file path and load the file
