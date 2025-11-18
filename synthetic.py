@@ -29,7 +29,7 @@ class SyntheticDataset(Dataset):
             self.permutation = loadmat(permutation)['transformed_indeces'] - 1 # From matlab to python
             self.permutation = self.permutation.squeeze()
         # Select corresponding audios
-        list_all_files = [f for f in listdir(file_path) if isfile(join(file_path, f))]
+        list_all_files = ['mic_sigs{:04d}.wav'.format(i) for i in range(1, 2501)]
         if permutation:
             list_all_files = [list_all_files[i] for i in self.permutation.tolist()]
             self.distances = self.distances[self.permutation]
@@ -215,3 +215,4 @@ if __name__ == '__main__':
     print("Train dataloader size: " + str(len(dataloader_datamodule_training)))
     print("Val dataloader size: " + str(len(dataloader_datamodule_val)))
     print("Test dataloader size: " + str(len(dataloader_datamodule_test)))
+
