@@ -48,14 +48,16 @@ If you use any part of this work (either codes or datasets), please cite the fol
   pages={1-5},
   doi={10.1109/WASPAA58266.2023.10248087}}
 
-@misc{neri2026dependenceearlylatereverberation,
-      title={Dependence on Early and Late Reverberation of Single-Channel Speaker Distance Estimation}, 
-      author={Michael Neri and Archontis Politis and Tuomas Virtanen},
-      year={2026},
-      eprint={2605.07694},
-      archivePrefix={arXiv},
-      primaryClass={eess.AS},
-      url={https://arxiv.org/abs/2605.07694}, 
-}
+
+
+@INPROCEEDINGS{Neri_IWAENC_2026,
+  title={Dependence on Early and Late Reverberation of Single-Channel Speaker Distance Estimation},
+  booktitle={18th International Workshop on Acoustic Signal Enhancement (IWAENC)}, 
+  author={Michael Neri and Archontis Politis and Tuomas Virtanen},
+  year={2026},
+  volume={},
+  number={},
+  pages={1-5},
+  doi={}}
 
 ```
