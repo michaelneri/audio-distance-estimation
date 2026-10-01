@@ -2,7 +2,7 @@
 
 <img src="images/network.png"/>
 
-Umbrella repository for estimating how far a talker is from a
+Repository for estimating how far a talker is from a
 microphone from **one channel** of reverberant speech.
 
 ## Start here
