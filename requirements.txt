@@ -1,0 +1,33 @@
+# Runtime dependencies for speaker_distance (single-channel speaker distance estimation).
+#
+# Lower bounds reflect what the code actually requires; the environment this was
+# last verified against is recorded in requirements-lock.txt.
+#
+# NOTE ON LIGHTNING: this code targets PyTorch Lightning 2.x. The original
+# TASLP-era training scripts passed Trainer(gpus=1), which 2.x removed - use
+# devices=1 instead. The canonical trainer in src/speaker_distance already does.
+
+torch>=2.0
+pytorch-lightning>=2.0
+torchlibrosa>=0.1.0
+
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+
+librosa>=0.10          # audio loading and resampling in the dataset modules
+soundfile>=0.12        # WAV I/O for dataset generation
+
+matplotlib>=3.7        # figures and distribution plots
+tqdm>=4.65
+
+pyyaml>=6.0            # experiment configuration files
+
+# --- Dataset generation only (papers/rir-analysis) -------------------------
+# Needed to regenerate the synthetic corpus; not required to train on it.
+pyroomacoustics>=0.7
+
+# --- Optional -------------------------------------------------------------
+# Experiment tracking. The training entrypoints fall back to a CSV logger when
+# this is absent, so it is not required to reproduce any result.
+# wandb>=0.16

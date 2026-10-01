@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "speaker_distance"
+version = "1.0.0"
+description = "Single-channel speaker distance estimation: shared code for WASPAA 2023, TASLP 2024, IWAENC 2026 and subsequent work"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Michael Neri" },
+    { name = "Archontis Politis" },
+    { name = "Tuomas Virtanen" },
+]
+keywords = [
+    "speaker distance estimation",
+    "reverberation",
+    "room acoustics",
+    "audio machine learning",
+]
+dependencies = [
+    "torch>=2.0",
+    "pytorch-lightning>=2.0",
+    "torchlibrosa>=0.1.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "matplotlib>=3.7",
+    "tqdm>=4.65",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+generation = ["pyroomacoustics>=0.7"]
+tracking = ["wandb>=0.16"]
+dev = ["pytest>=7.4"]
+
+[project.urls]
+Repository = "https://github.com/michaelneri/audio-distance-estimation"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

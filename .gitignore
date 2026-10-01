@@ -158,3 +158,64 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# ---------------------------------------------------------------------------
+# Research artifacts
+#
+# Audio, checkpoints and RIR archives are distributed via Zenodo, not git.
+# These rules are extension-based on purpose: the results CSVs that live
+# inside runs/, runs_noisy/ and synthetic_*/ are kept in version control,
+# so those directories must NOT be excluded wholesale.
+# ---------------------------------------------------------------------------
+
+*.wav
+*.ckpt
+*.wandb
+*.npz
+*.pth
+*.pt
+wandb/
+
+# Split/support files are small and must stay in lockstep with the code
+!papers/calibration/VoiceHome2_splitted.npz
+!**/folds5.csv
+
+# Per-sample prediction dumps. Regenerable by re-running the evaluation scripts,
+# and the summary tables that carry the published numbers are tracked instead.
+# These stay on disk - they are only kept out of version control.
+runs/
+runs_noisy/
+
+# The evaluation scripts write their per-sample dumps into results/ beside the
+# summaries. Only the summaries are tracked.
+papers/*/results/real_data_results.csv
+papers/*/results/real_data_train_results.csv
+papers/*/results/real_data_aux.csv
+
+# Dataset metadata and distribution plots belong to the Zenodo record, which
+# ships them in labels_and_splits.zip. Kept on disk as packaging input.
+**/metadata_variants.csv
+**/dataset_distributions.png
+
+# Dataset drop points: keep the README that explains how to fetch the data
+dataset_wav/*
+!dataset_wav/README.md
+noise_dataset/*
+!noise_dataset/README.md
+real datasets/*
+!real datasets/README.md
+shared_rir/
+
+# Zenodo staging area: the publishable corpus (~26 GB), the archives built from it,
+# and the packaging tooling and record metadata. All local - the datasets are
+# distributed from the Zenodo record itself, which the README links to.
+zenodo/
+
+# Generated preview of the published tree, for inspection before committing.
+# Never commit it: it would nest a copy of the repository inside itself.
+github/
+
+# Paper sources are kept out of the public repo while under review
+*.tex
+*.bib
+corrections.md

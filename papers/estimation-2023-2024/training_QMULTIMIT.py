@@ -1,6 +1,36 @@
+# --- runnability shim -------------------------------------------------------
+# Logging is opt-in: the default writes CSV and needs no account. Set
+# SPEAKER_DISTANCE_LOGGER=wandb to restore Weights & Biases. Data locations come
+# from the repository root, so the working directory does not matter.
+import os as _os, sys as _sys
+from pathlib import Path as _Path
+_HERE = _Path(__file__).resolve().parent
+_REPO = _HERE.parents[1]
+for _p in (str(_HERE), str(_REPO / "src")):
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+from speaker_distance.loggers import make_logger as _make_logger, finish as _finish
+from speaker_distance.paths import REPO_ROOT
+_BACKEND = _os.environ.get("SPEAKER_DISTANCE_LOGGER", "csv")
+if __name__ == "__main__":
+    # These scripts use paths relative to the repository root. Only applied when
+    # run directly, so importing the module has no side effects.
+    _os.chdir(REPO_ROOT)
+
+
+def WandbLogger(project=None, name=None, tags=None, **_kw):
+    return _make_logger(_BACKEND, run_name=name, project=project or "speaker-distance", tags=tags)
+
+
+class _WandbShim:
+    @staticmethod
+    def finish():
+        _finish()
+
+
+wandb = _WandbShim()
+# --- end shim ---------------------------------------------------------------
 from pytorch_lightning import Trainer
-from pytorch_lightning.loggers import WandbLogger
-import wandb
 from model import SeldTrainer
 import pandas as pd
 from QMULTIMIT import QMULLIMITDataModule
