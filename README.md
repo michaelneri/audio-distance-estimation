@@ -76,7 +76,7 @@ manipulation.
 The synthetic corpus (40,000 clips, 16 paired variants per scene), the STARSS23
 distance subset, and all annotations and splits are published as one citable record:
 
-> **Zenodo: [10.5281/zenodo.TODO](https://doi.org/10.5281/zenodo.TODO)** — ~26 GB,
+> **Zenodo: [10.5281/zenodo.23096979](https://doi.org/10.5281/zenodo.23096979)** — ~26 GB,
 > CC BY-NC 4.0
 
 The record's own description documents the variants, the metadata schema, the realised
