@@ -17,9 +17,7 @@
 > which remove the timing and level cues by construction and measure what remains.
 
 This folder is kept so the two published papers stay reproducible and so the
-progression of the work remains legible. It is not where to start.
-
-## What still stands
+progression of the work remains legible.
 
 - **The architecture.** The CRNN here is the same network used in all later stages,
   now maintained once in [`src/speaker_distance/models/`](../../src/speaker_distance/models/).
@@ -30,10 +28,7 @@ progression of the work remains legible. It is not where to start.
 
 ## How to read the numbers
 
-They describe performance in the **time-calibrated** setting. They are not directly
-comparable with the later stages, which report the uncalibrated case, and the gap
-between the two is the subject of the IWAENC 2026 analysis rather than a discrepancy
-to be reconciled.
+They describe performance in the **time-calibrated** setting.
 
 ## Contents
 
@@ -53,8 +48,6 @@ python papers/estimation-2023-2024/training_realData.py
 Set `SPEAKER_DISTANCE_LOGGER=wandb` for Weights & Biases instead of CSV. Check what
 resolved where with `python -m speaker_distance.paths`.
 
-See below for why `training_synthetic.py` is the exception.
-
 ### The datasets these need
 
 **The real-corpus scripts work today.** `training_realData.py` and
@@ -63,7 +56,6 @@ See below for why `training_synthetic.py` is the exception.
 they run.
 
 **`training_synthetic.py` uses an old version of the dataset. Use [`../rir-analysis/`](../rir-analysis/) instead. Its `data.py` reads the current corpus, and `synthetic_baseline` gives the same dataset.
-
 
 | want | use |
 |---|---|
