@@ -192,6 +192,9 @@ papers/*/results/real_data_results.csv
 papers/*/results/real_data_train_results.csv
 papers/*/results/real_data_aux.csv
 
+# Manuscript sources and figures, kept with their study but never published.
+papers/*/paper/
+
 # Dataset metadata and distribution plots belong to the Zenodo record, which
 # ships them in labels_and_splits.zip. Kept on disk as packaging input.
 **/metadata_variants.csv
